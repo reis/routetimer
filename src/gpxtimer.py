@@ -107,5 +107,6 @@ for xpoint in xtrackpoints[1:]:
     xpointtime = None
 
 # Writing a new file
-tree.write('data/runs/file_new.gpx')
+newfile = datetime.datetime.strptime(nstarttime, '%Y-%m-%d %H:%M').strftime('%Y%m%dT%H%M%S') + ' ' + nroute
+tree.write('data/runs/{0}.gpx'.format(newfile))
 
